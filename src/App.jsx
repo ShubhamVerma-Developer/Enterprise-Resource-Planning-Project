@@ -11,7 +11,7 @@ function App() {
       <div className="bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between py-4">
-            <Link to="/" className="text-2xl font-bold text-red-400">Enterprise Resource
+            <Link to="/" className="text-2xl font-bold text-Black-400">Enterprise Resource
 Planning☺️</Link>
             <div className="flex space-x-4">
               <Link to="/" className="hover:text-blue-500">Dashboard</Link>
