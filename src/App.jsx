@@ -3,6 +3,7 @@ import Dashboard from './components/Dashboard';
 import ProductsManagement from './components/ProductsManagement';
 import OrdersManagement from './components/OrdersManagement';
 import OrdersCalendarView from './components/OrdersCalendarView';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ Planning☺️</Link>
           <Route path="/calendar" element={<OrdersCalendarView />} />
         </Routes>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
