@@ -30,7 +30,9 @@ Planning☺️</Link>
           <Route path="/calendar" element={<OrdersCalendarView />} />
         </Routes>
       </div>
+      <div className='mt-[400]'>
       <Footer />
+      </div>
     </BrowserRouter>
   );
 }

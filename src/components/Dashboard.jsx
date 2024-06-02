@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Dashboard() {
   return (
     <>
-    <div className='container'>
+    <div className='container mt-4'>
     <div className="relative overflow-hidden bg-gradient-to-b from-blue-400 to-blue-600 rounded-lg shadow-md p-6">
       <h1 className="text-3xl font-bold text-white mb-4">Dashboard</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
