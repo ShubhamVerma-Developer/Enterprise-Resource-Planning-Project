@@ -1,32 +1,36 @@
-import { Route, Link, BrowserRouter, Routes } from 'react-router-dom';  
-import Dashboard from './components/Dashboard';  
-import ProductsManagement from './components/ProductsManagement';  
-import OrdersManagement from './components/OrdersManagement';  
-import OrdersCalendarView from './components/OrdersCalendarView';  
+import { Route, Link, BrowserRouter, Routes } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import ProductsManagement from './components/ProductsManagement';
+import OrdersManagement from './components/OrdersManagement';
+import OrdersCalendarView from './components/OrdersCalendarView';
 
-  
-function App() {  
-  return (  
+function App() {
+  return (
     <BrowserRouter>
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 bg-transparent">
-      <h1 className="text-4xl font-bold text-blue-600">Hello, Tailwind CSS!</h1>
-    </div>
-      <div className="Continer text-clip">  
-        <nav>  
-          <Link to="/" className='btn-red'>Dashboard</Link>  
-          <Link to="/products">Products</Link>  
-          <Link to="/orders">Orders</Link>  
-          <Link to="/calendar">Orders Calendar</Link>  
-        </nav>  
+      <div className="bg-gray-900 text-white">
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center justify-between py-4">
+            <Link to="/" className="text-2xl font-bold">Enterprise Resource
+Planning</Link>
+            <div className="flex space-x-4">
+              <Link to="/" className="hover:text-blue-500">Dashboard</Link>
+              <Link to="/products" className="hover:text-blue-500">Products</Link>
+              <Link to="/orders" className="hover:text-blue-500">Orders</Link>
+              <Link to="/calendar" className="hover:text-blue-500">Orders Calendar</Link>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div className="container mx-auto px-4">
         <Routes>
-          <Route exact path="/" element={<Dashboard />} />  
-          <Route path="/products" element={<ProductsManagement />} />  
-          <Route path="/orders" element={<OrdersManagement />} />  
-          <Route path="/calendar" element={<OrdersCalendarView />} />  
+          <Route exact path="/" element={<Dashboard />} />
+          <Route path="/products" element={<ProductsManagement />} />
+          <Route path="/orders" element={<OrdersManagement />} />
+          <Route path="/calendar" element={<OrdersCalendarView />} />
         </Routes>
-      </div>  
+      </div>
     </BrowserRouter>
-  );  
-}  
-  
-export default App;  
+  );
+}
+
+export default App;

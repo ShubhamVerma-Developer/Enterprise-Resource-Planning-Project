@@ -1,30 +1,35 @@
-import React, { useState } from 'react';  
-import mockData from '../../mockData'  
+import React, { useState } from 'react';
+import mockData from '../../mockData';
 
+function ProductsManagement() {
+  const [products, setProducts] = useState(mockData.products);
 
-function ProductsManagement() {  
-  const [products, setProducts] = useState(mockData.products);  
-  
-  const addProduct = () => {  
-    const newProduct = { id: Date.now(), name: 'New Product', category: 'Category', price: 0, stock: 0 };  
-    setProducts([...products, newProduct]);  
-  };  
-  
-  const deleteProduct = (id) => {  
-    setProducts(products.filter(product => product.id !== id));  
-  };  
-  
-  return (  
-    <div>  
-      <h1>Products Management</h1>  
-      <button onClick={addProduct}>Add Product</button>  
-      <ul>  
-      {products.map(product => (
-        <li key={product.id}>  </li>
+  const addProduct = () => {
+    const newProduct = { id: Date.now(), name: 'New Product', category: 'Category', price: 0, stock: 0 };
+    setProducts([...products, newProduct]);
+  };
+
+  const deleteProduct = (id) => {
+    setProducts(products.filter(product => product.id !== id));
+  };
+
+  return (
+    <div className="container mx-auto px-4">
+      <h1 className="text-3xl font-bold mb-4">Products Management</h1>
+      <button onClick={addProduct} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded inline-block mb-4">Add Product</button>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {products.map(product => (
+          <div key={product.id} className="bg-white rounded-lg shadow-md p-4">
+            <p className="text-lg font-semibold">{product.name}</p>
+            <p>Category: {product.category}</p>
+            <p>Price: {product.price}</p>
+            <p>Stock: {product.stock}</p>
+            <button onClick={() => deleteProduct(product.id)} className="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 rounded mt-2">Delete</button>
+          </div>
         ))}
-        </ul>
+      </div>
     </div>
-    )
+  );
 }
 
 export default ProductsManagement;

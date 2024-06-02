@@ -52,3 +52,5 @@ The Simplified ERP System is a basic implementation of an ERP (Enterprise Resour
    git clone https://github.com/your-username/simplified-erp-system.git
    cd simplified-erp-system
    ```
+
+![alt text](image.png)
